@@ -21,7 +21,7 @@ void displayFlights(const struct Flight flights[], int numFlights){
 				flights[i].flightNumber, flights[i].destination, flights[i].numPassengers, flights[i].capacity);
 
 		for(int j = 0; j<flights[i].numPassengers; j++){
-			print("Passengers %d: %s\n", j+1, flights[i].passengers[j]);
+			printf("Passengers %d: %s\n", j+1, flights[i].passengers[j]);
 		}
 		printf("-------------------------\n");
 	}
@@ -89,7 +89,7 @@ int main(){
 						printf("Enter passenger name: ");
 						char passengerName[50];
 						scanf("%s", passengerName);
-						addPassenger(&flights[flightIndex], passengerName);
+						addPassengers(&flights[flightIndex], passengerName);
 					} else {
 						printf("Flight not found.\n");
 
